@@ -13,5 +13,5 @@ jobs:
         run: |
           git config --global user.name 'ReadmeGenerator'
           git config --global user.email 'ReadmeGenerator@users.noreply.github.com'
-          git commit -am "Generated readme"
+          git commit -am "feat: generated readme"
           git push

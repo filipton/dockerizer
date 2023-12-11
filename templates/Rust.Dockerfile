@@ -16,6 +16,7 @@ RUN cp -r target/release/$(cat Cargo.toml | awk '/name/ {print}' | cut -d '"' -f
 FROM debian:bookworm-slim
 WORKDIR /app
 
+# test
 # Uncomment if you need to install any dependencies (and cleanup afterwards)
 # RUN rm -rf /var/lib/apt/lists/*
 

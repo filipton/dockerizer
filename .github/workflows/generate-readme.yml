@@ -1,0 +1,17 @@
+name: Generate readme and push
+on: push
+permissions:
+  contents: write
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate readme
+        run: ./generate.sh
+      - name: Commit
+        run: |
+          git config --global user.name 'ReadmeGenerator'
+          git config --global user.email 'ReadmeGenerator@users.noreply.github.com'
+          git commit -am "Generated readme"
+          git push

@@ -1,3 +1,13 @@
+# Repository of good dockerfile's
+Because why not
+
+## Table of contents
+
+ - [Rust](#rust)
+
+
+## Rust
+```dockerfile
 FROM rust:slim-bookworm AS builder
 WORKDIR /app
 
@@ -22,3 +32,5 @@ WORKDIR /app
 COPY --from=builder /app/app /app/app
 
 ENTRYPOINT [ "/app/app" ]
+```
+
